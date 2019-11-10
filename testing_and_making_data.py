@@ -10,7 +10,7 @@ import random
 import tensorflow as tf
 
 
-MODEL_NAME = "new_models/61.4-acc-64x4-5epoch-1573261350-loss-2.39.model"
+MODEL_NAME = ""  # your model path here. 
 
 model = tf.keras.models.load_model(MODEL_NAME)
 reshape = (-1, 16, 60)
