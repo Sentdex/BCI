@@ -9,10 +9,10 @@ Currently, the data available is 16-channel FFT 0-60Hz, sampled at a rate of abo
 I am not sure where I want to put the data, but, for now, it's available here: https://hkinsley.com/static/downloads/bci/model_data.7z
 
 *File structure*: 
--data\n
-  -left\n
-  -none\n
-  -right\n
+-data<br>
+  -left<br>
+  -none<br>
+  -right<br>
 -validation_data\n
   -left\n
   -none\n
