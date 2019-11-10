@@ -13,6 +13,7 @@ If people are able to beat my model and are willing to share their models. I wil
 
 Since some people wont be able to resist making a model on validation data...I will use my own separate validation data to actually create scores. If you're not cheating, this shouldn't impact you ;)
 
+
 `analysis.py` - You can use this to run through validation data to see confusion matricies for your models on out of sample data.
 
 Example of a % accuracy confusion matrix (the default graphed):
@@ -23,6 +24,10 @@ In the above confusion matrix, we can see that if the thought is left, the model
 For the "right" thought, we can see the model predicted that correctly 64% of the time, predicted none 16% of the time, and predicted left 21% of the time.
 
 An "ideal" confusion matrix would be a perfectly green diagonal line of boxes from the top left to the bottom right. This isn't too bad so far. 
+
+
+`testing_and_making_data.py` - This is just here if you happen to have your own OpenBCI headset and want to actually play with the model and/or build on the dataset. Or if you just want to help audit/improve my code. This file will load in whatever model you wish to use, you will specify the action you intend to think ahead of time for the `ACTION` var, then you run the script. The environment will pop up and collect all of your FFT data, storing them to a numpy file in the dir named whatever you said the `ACTION` thought was.
+
 
 # Requirements
 Numpy
