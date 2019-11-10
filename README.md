@@ -11,6 +11,9 @@ Since some people wont be able to resist making a model on validation data...I w
 
 `analysis.py` - You can use this to run through validation data to see confusion matricies for your models on out of sample data.
 
+Example of a % accuracy confusion matrix (the default graphed):
+![FFT graph single channel](https://pythonprogramming.net/static/images/bci/model_conf_matrix.png)
+
 # Requirements
 Numpy
 TensorFlow (I am using 2.0, but I am not using anything 2.0 specific)
