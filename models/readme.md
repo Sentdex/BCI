@@ -2,6 +2,11 @@ Contained in here will be models that are decent or just collected over time.
 
 
 # 61.4-acc-loss-2.39-top.model:
+Overall issues here:
+val acc/loss is far worse than in-sample. We've got some serious overfitment happening for the in-sample data. 
+
+I have various ideas to help fix this. In-sample data is highly similar to other samples. The FFT from frame-to-frame is going to be very similar. Might be wise to make training data every `n` samples. Preliminary tests doing this have not yielded any more reliable information, but if you do `n=5` this means you have 1/5th the training data...which obviously is pretty brutal. Will have to...make more data!
+
 ```py
 model = Sequential()
 
