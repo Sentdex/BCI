@@ -41,5 +41,19 @@ plt.show()
 ```
 
 You will see a graph of: The data for Channel 0 for the very first sample.
-![alt text](https://pythonprogramming.net/static/images/bci/fft-single-channel.png)
+![FFT graph single channel](https://pythonprogramming.net/static/images/bci/fft-single-channel.png)
+
+If you want to see all 16 channels:
+```py
+import numpy as np
+import matplotlib.pyplot as plt
+
+d = np.load("data/left/1572814991.npy")
+
+for channel in d[175]:
+	plt.plot(channel)
+plt.show()
+```
+![FFT graph 16 channels](https://pythonprogramming.net/static/images/bci/fft-16-channels.png)
+
 
