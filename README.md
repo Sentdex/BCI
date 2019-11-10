@@ -9,14 +9,14 @@ Currently, the data available is 16-channel FFT 0-60Hz, sampled at a rate of abo
 I am not sure where I want to put the data, but, for now, it's available here: https://hkinsley.com/static/downloads/bci/model_data.7z
 
 *File structure*: 
--data
-  -left
-  -none
-  -right
--validation_data
-  -left
-  -none
-  -right
+-data\n
+  -left\n
+  -none\n
+  -right\n
+-validation_data\n
+  -left\n
+  -none\n
+  -right\n
  
 Contained within the left, none, and right directories are `.npy` files with unix timestamps as their name. Each of the files is a numpy array of shape: 
 ```py
