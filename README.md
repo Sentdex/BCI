@@ -9,6 +9,8 @@ If people are able to beat my model and are willing to share their models. I wil
 
 Since some people wont be able to resist making a model on validation data...I will use my own separate validation data to actually create scores. If you're not cheating, this shouldn't impact you ;)
 
+`analysis.py` - You can use this to run through validation data to see confusion matricies for your models on out of sample data.
+
 # Requirements
 Numpy
 TensorFlow (I am using 2.0, but I am not using anything 2.0 specific)
