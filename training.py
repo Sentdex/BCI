@@ -8,11 +8,8 @@ import random
 import time
 
 
-
 ACTIONS = ["left", "right", "none"]
 reshape = (-1, 16, 60)
-
-
 
 def create_data(starting_dir="data"):
     training_data = {}
