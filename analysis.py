@@ -30,7 +30,6 @@ def get_val_data(valdir, action, batch_size):
             for idx,value in enumerate(pred):
                 raw_pred_dict[idx] += value
 
-
     argmax_pct_dict = {}
 
     for i in argmax_dict:
@@ -65,6 +64,8 @@ def make_conf_mat(left, none, right):
             print(i, ii)
             print(action_dict[i][ii])
             ax.text(idx, idx2, f"{round(float(action_dict[i][ii]),2)}", va='center', ha='center')
+    plt.title("Action Thought")
+    plt.ylabel("Predicted Action")
     plt.show()
 
 
