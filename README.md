@@ -1,6 +1,10 @@
 # Brain-Computer Interface workspace
 
-My objective here is to share some of the code, models, and data from the OpenBCI 16-channel headset. I suspect many people are not going to be able to get their hands on the headset, but that doesn't mean you can't still play with some of the data! 
+My objective here is to share some of the code, models, and data from the OpenBCI 16-channel headset. I suspect many people are not going to be able to get their hands on the headset, but that doesn't mean you can't still play with some of the data!
+
+# Objectives
+
+To start, my objective is to train a neural network to detect thoughts of left/right movements. From here, I would like to apply this BCI control to GTA V 
 
 # Files
 `training.py` - This is merely an example of training a model with this data. I have yet to find any truly great model, though at the end of this readme, I will try to keep an updated confusion matrix of my best-yet models. This way, you can easily tell if you've been able to find something better than what I've got. 
@@ -26,11 +30,12 @@ TensorFlow (I am using 2.0, but I am not using anything 2.0 specific)
 
 # The data
 
-Currently, the data available is 16-channel FFT 0-60Hz, sampled at a rate of about 25/second.
+Currently, the data available is 16-channel FFT 0-60Hz, sampled at a rate of about 25/second. Data is contained in directories labeled as `left`, `right`, or `none`. These directories contain numpy arrays of this FFT data collected where I was thinking of moving a square on the screen in this directions. 
 
 I am not sure where I want to put the data, but, for now, it's available here: 
-
 <strong>Download:</strong> https://hkinsley.com/static/downloads/bci/model_data.7z
+
+I plan to upload more and more as I create more data.
 
 *File structure*: 
 <ul>
