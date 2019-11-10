@@ -3,9 +3,9 @@
 My objective here is to share some of the code, models, and data from the OpenBCI 16-channel headset. I suspect many people are not going to be able to get their hands on the headset, but that doesn't mean you can't still play with some of the data! 
 
 # Files
-`training.py` - This is merely an example of training a model with this data. I have yet to find any unbelievable model, though at the end of this readme, I will try to keep an updated confusion matrix of my best-yet models. This way, you can easily tell if you've been able to find something better than what I've got. 
+`training.py` - This is merely an example of training a model with this data. I have yet to find any truly great model, though at the end of this readme, I will try to keep an updated confusion matrix of my best-yet models. This way, you can easily tell if you've been able to find something better than what I've got. 
 
-If people are able to beat my model and are willing to share their models. I will post some sort of highscores somewhere.
+If people are able to beat my model and are willing to share their models. I will post some sort of highscores somewhere on this repo.
 
 Since some people wont be able to resist making a model on validation data...I will use my own separate validation data to actually create scores. If you're not cheating, this shouldn't impact you ;)
 
