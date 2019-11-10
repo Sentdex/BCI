@@ -12,14 +12,14 @@ I am not sure where I want to put the data, but, for now, it's available here: h
 <ul>
 	<li>data
 		<ul>
-			<lileftli>
+			<li>left</li>
 			<li>none</li>
 			<li>right</li>
 		</ul>
 	</li>
 	<li>validation_data
 		<ul>
-			<lileftli>
+			<li>left<li>
 			<li>none</li>
 			<li>right</li>
 		</ul>
