@@ -28,7 +28,9 @@ TensorFlow (I am using 2.0, but I am not using anything 2.0 specific)
 
 Currently, the data available is 16-channel FFT 0-60Hz, sampled at a rate of about 25/second.
 
-I am not sure where I want to put the data, but, for now, it's available here: <strong>Download:</strong>https://hkinsley.com/static/downloads/bci/model_data.7z
+I am not sure where I want to put the data, but, for now, it's available here: 
+
+<strong>Download:</strong> https://hkinsley.com/static/downloads/bci/model_data.7z
 
 *File structure*: 
 <ul>
