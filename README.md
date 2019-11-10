@@ -12,7 +12,13 @@ Since some people wont be able to resist making a model on validation data...I w
 `analysis.py` - You can use this to run through validation data to see confusion matricies for your models on out of sample data.
 
 Example of a % accuracy confusion matrix (the default graphed):
-![FFT graph single channel](https://pythonprogramming.net/static/images/bci/model_conf_matrix.png)
+![confusion matrix](https://pythonprogramming.net/static/images/bci/model_conf_matrix.png)
+
+In the above confusion matrix, we can see that if the thought is left, the model accurately predicts this 53% of the time, predicts that left thought is actually none 15% of the time, and predicts right 32% of the time. 
+
+For the "right" thought, we can see the model predicted that correctly 64% of the time, predicted none 16% of the time, and predicted left 21% of the time.
+
+An "ideal" confusion matrix would be a perfectly green diagonal line of boxes from the top left to the bottom right. This isn't too bad so far. 
 
 # Requirements
 Numpy
@@ -79,5 +85,9 @@ for channel in d[175]:
 plt.show()
 ```
 ![FFT graph 16 channels](https://pythonprogramming.net/static/images/bci/fft-16-channels.png)
+
+
+# Best model so far:
+![confusion matrix](https://pythonprogramming.net/static/images/bci/model_conf_matrix.png)
 
 
