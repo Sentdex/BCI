@@ -8,7 +8,7 @@ Currently, the data available is 16-channel FFT 0-60Hz, sampled at a rate of abo
 
 I am not sure where I want to put the data, but, for now, it's available here: https://hkinsley.com/static/downloads/bci/model_data.7z
 
-File structure: 
+*File structure*: 
 -data
   -left
   -none
@@ -27,3 +27,19 @@ print(d.shape)
 
 >>>(250, 16, 60)
 ```
+
+Each file is targeted to be 10 seconds long, which, at 25 iter/sec gives us, the 250 (though you should not depend/assume all files will be exactly 250 long). Then you have the number of channels (16), and then 60 values, for up to 60Hz. For example, if you do: 
+
+```py
+import numpy as np
+import matplotlib.pyplot as plt
+
+d = np.load("data/left/1572814991.npy")
+
+plt.plot(d[0][0])
+plt.show()
+```
+
+You will see a graph of: The data for Channel 0 for the very first sample.
+![alt text](https://pythonprogramming.net/static/images/bci/fft-single-channel.png)
+
