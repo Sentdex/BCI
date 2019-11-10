@@ -19,7 +19,8 @@ File structure:
   -right
  
 Contained within the left, none, and right directories are `.npy` files with unix timestamps as their name. Each of the files is a numpy array of shape: 
-```import numpy as np
+```py
+import numpy as np
 
 d = np.load("data/left/1572814991.npy")
 print(d.shape)
