@@ -37,7 +37,10 @@ An "ideal" confusion matrix would be a perfectly green diagonal line of boxes fr
 
 # Requirements
 Numpy
-TensorFlow (I am using 2.0, but I am not using anything 2.0 specific)
+TensorFlow 2.0. (you need 2.0 if you intend to load the models)
+pylsl (if you intend to run on an actual headset)
+OpenBCI GUI (using the networking tab https://docs.openbci.com/docs/06Software/01-OpenBCISoftware/GUIDocs)
+
 
 
 # The data
