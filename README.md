@@ -110,7 +110,9 @@ plt.show()
 
 
 # Best model so far (on the validation/out of sample data):
-![confusion matrix](https://pythonprogramming.net/static/images/bci/model_conf_matrix.png)
+![confusion matrix](https://pythonprogramming.net/static/images/bci/withclippingdata.png)
+
+More info: https://github.com/Sentdex/BCI/tree/master/models#all-cnn-model-6323-acc-loss-252model
 
 
 
