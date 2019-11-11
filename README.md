@@ -1,13 +1,16 @@
+![OpenBCI Headset](https://pythonprogramming.net/static/images/bci/openbciheadset.png)
+
 # Brain-Computer Interface workspace
 
 My objective here is to share some of the code, models, and data from the OpenBCI 16-channel headset. I suspect many people are not going to be able to get their hands on the headset, but that doesn't mean you can't still play with some of the data!
 
-Headset used is the OpenBCI Mark IV 
-![confusion matrix](https://pythonprogramming.net/static/images/bci/openbciheadset.png)
+Headset used is the OpenBCI Ultracortex Mark IV. You can check out OpenBCI's products here: https://shop.openbci.com/
+
 
 # Objectives
 
 To start, my objective is to train a neural network to detect thoughts of left/right movements. From here, I would like to apply this BCI control to GTA V 
+
 
 # Files
 `training.py` - This is merely an example of training a model with this data. I have yet to find any truly great model, though at the end of this readme, I will try to keep an updated confusion matrix of my best-yet models. This way, you can easily tell if you've been able to find something better than what I've got. 
@@ -35,6 +38,7 @@ An "ideal" confusion matrix would be a perfectly green diagonal line of boxes fr
 # Requirements
 Numpy
 TensorFlow (I am using 2.0, but I am not using anything 2.0 specific)
+
 
 # The data
 
