@@ -6,11 +6,14 @@ import matplotlib.pyplot as plt
 
 
 MODEL_NAME = ""
+
+CLIP = True  # if your model was trained with np.clip to clip  values
+CLIP_VAL = 10  # if above, what was the value +/-
+
 model = tf.keras.models.load_model(MODEL_NAME)
 
 VALDIR = 'validation_data'
 ACTIONS = ['left','none','right']
-
 PRED_BATCH = 32
 
 
@@ -22,8 +25,13 @@ def get_val_data(valdir, action, batch_size):
     action_dir = os.path.join(valdir, action)
     for session_file in os.listdir(action_dir):
         filepath = os.path.join(action_dir,session_file)
-        data = np.load(filepath)
+        if CLIP:
+            data = np.clip(np.load(filepath), -CLIP_VAL, CLIP_VAL) / CLIP_VAL
+        else:
+            data = np.load(filepath) 
+
         preds = model.predict([data.reshape(-1, 16, 60)], batch_size=batch_size)
+
         for pred in preds:
             argmax = np.argmax(pred)
             argmax_dict[argmax] += 1
@@ -49,7 +57,6 @@ def make_conf_mat(left, none, right):
     action_conf_mat = pd.DataFrame(action_dict)
     actions = [i for i in action_dict]
 
-
     fig = plt.figure()
     ax = fig.add_subplot(111)
     ax.matshow(action_conf_mat, cmap=plt.cm.RdYlGn)
@@ -72,6 +79,5 @@ def make_conf_mat(left, none, right):
 left_argmax_dict, left_raw_pred_dict, left_argmax_pct_dict = get_val_data(VALDIR, "left", PRED_BATCH)
 none_argmax_dict, none_raw_pred_dict, none_argmax_pct_dict = get_val_data(VALDIR, "none", PRED_BATCH)
 right_argmax_dict, right_raw_pred_dict, right_argmax_pct_dict = get_val_data(VALDIR, "right", PRED_BATCH)
-
 
 make_conf_mat(left_argmax_pct_dict, none_argmax_pct_dict, right_argmax_pct_dict)
