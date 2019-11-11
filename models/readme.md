@@ -77,15 +77,15 @@ This model does not make a use of Densely connected layers, output layer is shap
 Accuracy of 63.26% was achieved by additional clipping and scaling of data of samples:
 
 ```py
-train_X = np.clip(np.array(train_X).reshape(reshape) - np.mean(train_X), -10, 10) / 10
-test_X = np.clip(np.array(test_X).reshape(reshape) - np.mean(test_X), -10, 10) / 10
+train_X = np.clip(np.array(train_X).reshape(reshape), -10, 10) / 10
+test_X = np.clip(np.array(test_X).reshape(reshape), -10, 10) / 10
 ```
 
 Another working approach:
 
 ```py
-train_X = np.clip(np.array(train_X).reshape(reshape) - np.mean(train_X), -3, 3) / 3
-test_X = np.clip(np.array(test_X).reshape(reshape) - np.mean(test_X), -3, 3) / 3
+train_X = np.clip(np.array(train_X).reshape(reshape), -3, 3)
+test_X = np.clip(np.array(test_X).reshape(reshape), -3, 3)
 ```
 
 Code for this model: https://gist.github.com/daniel-kukiela/8282612a23c9646cc8314bf3b3905d85
