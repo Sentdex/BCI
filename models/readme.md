@@ -91,3 +91,6 @@ test_X = np.clip(np.array(test_X).reshape(reshape) - np.mean(test_X), -3, 3) / 3
 Code for this model: https://gist.github.com/daniel-kukiela/8282612a23c9646cc8314bf3b3905d85
 
 Remember to update `analysis.py` with same type of scaling on `X` before predicting.
+
+Confusion matrix for this trained model:
+![confusion matrix](63.23-acc-loss-2.52.model.confusion_matrix.png)
