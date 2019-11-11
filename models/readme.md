@@ -40,3 +40,54 @@ model.compile(loss='categorical_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
 ```
+
+
+# all-cnn model (63.23-acc-loss-2.52.model)
+
+Overall issues stay the same as for `61.4-acc-loss-2.39-top.model` model.
+
+This model achives a bit higher validation accuracy and accuracy is more stable across epochs during training.
+
+```py
+model = Sequential()
+
+model.add(Conv1D(64, (5), padding='same', input_shape=train_X.shape[1:]))
+model.add(Activation('relu'))
+
+model.add(Conv1D(128, (5), padding='same'))
+model.add(Activation('relu'))
+
+model.add(Conv1D(256, (5), padding='same'))
+model.add(Activation('relu'))
+
+model.add(Conv1D(512, (5), padding='same'))
+model.add(Activation('relu'))
+
+model.add(Conv1D(3, (16)))
+model.add(Reshape((3,)))
+model.add(Activation('softmax'))
+
+model.compile(loss='categorical_crossentropy',
+              optimizer='adam',
+              metrics=['accuracy'])
+```
+
+This model does not make a use of Densely connected layers, output layer is shaped to have 3 outputs.
+
+Accuracy of 63.26% was achieved by additional clipping and scaling of data of samples:
+
+```py
+train_X = np.clip(np.array(train_X).reshape(reshape) - np.mean(train_X), -10, 10) / 10
+test_X = np.clip(np.array(test_X).reshape(reshape) - np.mean(test_X), -10, 10) / 10
+```
+
+Another working approach:
+
+```py
+train_X = np.clip(np.array(train_X).reshape(reshape) - np.mean(train_X), -3, 3) / 3
+test_X = np.clip(np.array(test_X).reshape(reshape) - np.mean(test_X), -3, 3) / 3
+```
+
+Code for this model: https://gist.github.com/daniel-kukiela/8282612a23c9646cc8314bf3b3905d85
+
+Remember to update `analysis.py` with same type of scaling on `X` before predicting.
