@@ -109,7 +109,7 @@ plt.show()
 ![FFT graph 16 channels](https://pythonprogramming.net/static/images/bci/fft-16-channels.png)
 
 
-# Best model so far:
+# Best model so far (on the validation/out of sample data):
 ![confusion matrix](https://pythonprogramming.net/static/images/bci/model_conf_matrix.png)
 
 
