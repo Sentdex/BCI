@@ -2,6 +2,9 @@
 
 My objective here is to share some of the code, models, and data from the OpenBCI 16-channel headset. I suspect many people are not going to be able to get their hands on the headset, but that doesn't mean you can't still play with some of the data!
 
+Headset used is the OpenBCI Mark IV 
+![confusion matrix](https://pythonprogramming.net/static/images/bci/openbciheadset.png)
+
 # Objectives
 
 To start, my objective is to train a neural network to detect thoughts of left/right movements. From here, I would like to apply this BCI control to GTA V 
