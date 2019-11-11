@@ -52,7 +52,7 @@ I am not sure where I want to put the data, but, for now, it's available here:
 
 I plan to upload more and more as I create more data.
 
-*File structure*: 
+*File structure (for both the data and validation_data directories)*: 
 <ul>
 	<li>data
 		<ul>
