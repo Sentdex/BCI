@@ -110,7 +110,7 @@ plt.show()
 
 
 # Best model so far:
-![confusion matrix](https://pythonprogramming.net/static/images/bci/withclippingdata.png)
+![confusion matrix](https://pythonprogramming.net/static/images/bci/model_conf_matrix.png)
 
 
 
