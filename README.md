@@ -24,6 +24,7 @@ Since some people wont be able to resist making a model on validation data...I w
 
 Example of a % accuracy confusion matrix (the default graphed):
 ![confusion matrix](https://pythonprogramming.net/static/images/bci/model_conf_matrix.png)
+Model used for the above: https://github.com/Sentdex/BCI/tree/master/models#614-acc-loss-239-topmodel
 
 In the above confusion matrix, we can see that if the thought is left, the model accurately predicts this 53% of the time, predicts that left thought is actually none 15% of the time, and predicts right 32% of the time. 
 
