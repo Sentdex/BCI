@@ -49,7 +49,7 @@ OpenBCI GUI (using the networking tab https://docs.openbci.com/docs/06Software/0
 Currently, the data available is 16-channel FFT 0-60Hz, sampled at a rate of about 25/second. Data is contained in directories labeled as `left`, `right`, or `none`. These directories contain numpy arrays of this FFT data collected where I was thinking of moving a square on the screen in this directions. 
 
 I am not sure where I want to put the data, but, for now, it's available here: 
-<strong>Download:</strong> https://hkinsley.com/static/downloads/bci/model_data.7z
+<strong>Download:</strong> https://hkinsley.com/static/downloads/bci/model_data_v2.7z
 
 I plan to upload more and more as I create more data.
 
