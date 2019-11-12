@@ -93,4 +93,5 @@ Code for this model: https://gist.github.com/daniel-kukiela/8282612a23c9646cc831
 Remember to update `analysis.py` with same type of scaling on `X` before predicting.
 
 Confusion matrix for this trained model:
+
 ![confusion matrix](https://pythonprogramming.net/static/images/bci/currentbest.png)
