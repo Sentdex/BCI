@@ -26,9 +26,9 @@ Example of a % accuracy confusion matrix (the default graphed):
 ![confusion matrix](https://pythonprogramming.net/static/images/bci/model_conf_matrix.png)
 Model used for the above: https://github.com/Sentdex/BCI/tree/master/models#614-acc-loss-239-topmodel
 
-In the above confusion matrix, we can see that if the thought is left, the model accurately predicts this 53% of the time, predicts that left thought is actually none 15% of the time, and predicts right 32% of the time. 
+In the above confusion matrix, we can see that if the thought is `left`, the model accurately predicts this 53% of the time, predicts that `left` thought is actually `none` 15% of the time, and predicts `right` 32% of the time. 
 
-For the "right" thought, we can see the model predicted that correctly 64% of the time, predicted none 16% of the time, and predicted left 21% of the time.
+For the `right` thought, we can see the model predicted that correctly 64% of the time, predicted `none` 16% of the time, and predicted `left` 21% of the time.
 
 An "ideal" confusion matrix would be a perfectly green diagonal line of boxes from the top left to the bottom right. This isn't too bad so far. 
 
@@ -37,11 +37,10 @@ An "ideal" confusion matrix would be a perfectly green diagonal line of boxes fr
 
 
 # Requirements
-Numpy
-TensorFlow 2.0. (you need 2.0 if you intend to load the models)
-pylsl (if you intend to run on an actual headset)
-OpenBCI GUI (using the networking tab https://docs.openbci.com/docs/06Software/01-OpenBCISoftware/GUIDocs)
-
+* Numpy
+* TensorFlow 2.0. (you need 2.0 if you intend to load the models)
+* pylsl (if you intend to run on an actual headset)
+* OpenBCI GUI (using the networking tab https://docs.openbci.com/docs/06Software/01-OpenBCISoftware/GUIDocs)
 
 
 # The data
@@ -82,7 +81,6 @@ print(d.shape)
 ```
 
 Each file is targeted to be 10 seconds long, which, at 25 iter/sec gives us, the 250 (though you should not depend/assume all files will be exactly 250 long). Then you have the number of channels (16), and then 60 values, for up to 60Hz. For example, if you do: 
-
 ```py
 import numpy as np
 import matplotlib.pyplot as plt
@@ -114,6 +112,3 @@ plt.show()
 ![confusion matrix](https://pythonprogramming.net/static/images/bci/currentbest.png)
 
 More info: https://github.com/Sentdex/BCI/tree/master/models#all-cnn-model-6323-acc-loss-252model
-
-
-
